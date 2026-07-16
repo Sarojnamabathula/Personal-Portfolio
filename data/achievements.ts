@@ -1,0 +1,58 @@
+export const achievements = [
+  {
+    id: "ibm-internship",
+    title: "IBM SkillsBuild AI & Cloud Internship",
+    description: "Successfully completed the competitive IBM SkillsBuild internship program in AI & Cloud in collaboration with Edunet Foundation and AICTE",
+    icon: "🏆",
+    category: "Internship",
+    year: "2024",
+    color: "from-blue-500 to-indigo-600",
+  },
+  {
+    id: "cv-projects",
+    title: "8+ AI Projects Deployed",
+    description: "Built and deployed 8+ end-to-end AI applications spanning Computer Vision, NLP, and Full-Stack development",
+    icon: "🚀",
+    category: "Projects",
+    year: "2024",
+    color: "from-violet-500 to-purple-600",
+  },
+  {
+    id: "certifications",
+    title: "10+ Professional Certifications",
+    description: "Earned 10+ industry certifications from IBM SkillsBuild and Google Cloud Skills Boost covering AI, ML, Cloud, and Generative AI",
+    icon: "🎖️",
+    category: "Certification",
+    year: "2024",
+    color: "from-amber-500 to-orange-600",
+  },
+  {
+    id: "open-source",
+    title: "Active Open Source Contributor",
+    description: "Maintaining public repositories on GitHub with AI and Computer Vision projects shared with the developer community",
+    icon: "💻",
+    category: "Open Source",
+    year: "2024",
+    color: "from-green-500 to-emerald-600",
+  },
+  {
+    id: "learning-streak",
+    title: "18+ Month AI Learning Journey",
+    description: "Consistent self-directed learning in AI, Machine Learning, Deep Learning, and Generative AI for over 18 months",
+    icon: "📚",
+    category: "Learning",
+    year: "2024",
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    id: "multi-domain",
+    title: "Multi-Domain AI Expertise",
+    description: "Developed expertise across Computer Vision, NLP, Generative AI, RAG, and Agentic AI — covering the full AI engineering spectrum",
+    icon: "🧠",
+    category: "Expertise",
+    year: "2024",
+    color: "from-red-500 to-pink-600",
+  },
+];
+
+export type Achievement = (typeof achievements)[0];
