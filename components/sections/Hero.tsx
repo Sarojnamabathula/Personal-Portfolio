@@ -171,7 +171,7 @@ export default function Hero() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Sparkles size={14} className="text-purple-400" />
-                B.Tech Computer Science
+                B.Tech Information Technology
               </span>
             </motion.div>
 
