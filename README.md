@@ -2,7 +2,7 @@
 
 > A premium, production-ready portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Designed to impress recruiters at top AI companies.
 
-![Portfolio Preview](public/og-image.png)
+![Portfolio Preview](https://sarojnamabathula.vercel.app/)
 
 ## ✨ Features
 
