@@ -3,7 +3,7 @@ export const education = [
     id: "btech-it",
     degree: "B.Tech in Information Technology",
     institution: "Jawaharlal Nehru Technological University-Gurajada, Vizianagaram (JNTU-GV)",
-    duration: "2022 - 2026",
+    duration: "2023 - 2027",
     location: "India",
     description: "Specializing in Computer Science and Information Technology with a focus on Artificial Intelligence and Machine Learning.",
     achievements: [
