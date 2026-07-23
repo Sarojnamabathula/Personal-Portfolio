@@ -5,12 +5,13 @@ import { siteConfig } from "@/config/site";
 import { Mail, ArrowUp, Heart } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+import VisitorCounter from "@/components/ui/VisitorCounter";
+
 const quickLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Certifications", href: "#certifications" },
+  { label: "Journey", href: "#timeline" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -106,11 +107,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25 flex items-center gap-1.5">
-            © {new Date().getFullYear()} {siteConfig.name}. Built with
-            <Heart size={11} className="text-red-400/60 inline" />
-            using Next.js & Framer Motion.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-xs text-white/25 flex items-center gap-1.5">
+              © {new Date().getFullYear()} {siteConfig.name}. Built with
+              <Heart size={11} className="text-red-400/60 inline" />
+              using Next.js & Framer Motion.
+            </p>
+            <VisitorCounter />
+          </div>
           <button
             onClick={scrollTop}
             className="flex items-center gap-2 px-4 py-2 rounded-lg glass border border-white/10 text-white/40 hover:text-white hover:border-indigo-500/30 text-xs transition-all"

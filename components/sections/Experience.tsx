@@ -30,7 +30,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Professional Journey
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             Hands-on industry experience building AI systems and cloud applications
           </p>
         </motion.div>
@@ -38,7 +38,7 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-purple-500/30 to-transparent" />
+          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-purple-500/30 to-transparent" />
 
           {experiences.map((exp, i) => (
             <motion.div
@@ -51,10 +51,10 @@ export default function Experience() {
               }`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border-2 border-black shadow-glow-sm z-10" />
+              <div className="absolute left-5 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border-2 border-black shadow-glow-sm z-10" />
 
               {/* Card */}
-              <div className={`ml-20 md:ml-0 md:w-[calc(50%-2rem)] glass-hover glow-card rounded-2xl border border-white/8 overflow-hidden ${
+              <div className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] glass-hover glow-card rounded-2xl border border-white/8 overflow-hidden ${
                 i % 2 === 0 ? "md:mr-12" : "md:ml-12"
               }`}>
                 {/* Gradient top */}

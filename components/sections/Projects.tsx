@@ -240,7 +240,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Things I've Built
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             End-to-end AI systems, computer vision applications, and full-stack products built with purpose
           </p>
         </motion.div>
@@ -250,9 +250,9 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-4 mb-10"
+          className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10"
         >
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center md:justify-start gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -272,12 +272,12 @@ export default function Projects() {
             placeholder="Search projects..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full md:w-64 px-4 py-2 rounded-xl glass border border-white/10 bg-transparent text-white/80 placeholder-white/30 text-sm outline-none focus:border-indigo-500/40 transition-colors"
+            className="w-full md:w-64 px-4 py-2 rounded-xl glass border border-white/10 bg-transparent text-white/80 placeholder-white/30 text-sm outline-none focus:border-indigo-500/40 transition-colors flex-shrink-0"
           />
         </motion.div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filtered.map((project, i) => (
             <ProjectCard
               key={project.id}

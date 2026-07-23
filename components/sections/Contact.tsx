@@ -36,7 +36,7 @@ export default function Contact() {
     }
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm outline-none focus:border-indigo-500/50 focus:bg-white/8 transition-all duration-200";
+  const inputClass = "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm outline-none focus:border-indigo-500/60 focus:bg-indigo-500/5 focus:ring-1 focus:ring-indigo-500/30 transition-all duration-200";
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden">
@@ -59,7 +59,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Let's Build Together
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             Open to internships, collaborations, and exciting AI projects. Let's connect!
           </p>
         </motion.div>

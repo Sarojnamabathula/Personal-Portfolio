@@ -18,7 +18,7 @@ function CertCard({ cert, delay }: { cert: typeof certifications[0]; delay: numb
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay, duration: 0.5 }}
-      className="cursor-pointer h-48"
+      className="cursor-pointer h-56"
       style={{ perspective: "1000px" }}
       onClick={() => setFlipped(!flipped)}
     >
@@ -107,7 +107,7 @@ export default function Certifications() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Verified Expertise
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             Industry-recognized certifications from IBM and Google Cloud validating my AI and cloud skills
           </p>
         </motion.div>
@@ -117,17 +117,17 @@ export default function Certifications() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 mb-10"
+          className="flex flex-wrap justify-center gap-4 mb-6"
         >
           {[
             { name: "IBM SkillsBuild", icon: "🏢", count: certifications.filter(c => c.issuer.includes("IBM")).length },
             { name: "Google Cloud Skills Boost", icon: "🌐", count: certifications.filter(c => c.issuer.includes("Google")).length },
           ].map((issuer) => (
-            <div key={issuer.name} className="flex items-center gap-3 px-5 py-3 rounded-xl glass border border-white/10">
+            <div key={issuer.name} className="flex items-center gap-3 px-5 py-2.5 rounded-xl glass border border-white/10 shadow-glow-sm">
               <span className="text-xl">{issuer.icon}</span>
               <div>
                 <div className="text-sm font-semibold text-white">{issuer.name}</div>
-                <div className="text-xs text-white/40">{issuer.count} certifications</div>
+                <div className="text-xs text-indigo-300/80">{issuer.count} certifications</div>
               </div>
             </div>
           ))}
@@ -138,15 +138,15 @@ export default function Certifications() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.25, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-2 mb-10"
+          className="flex flex-wrap justify-center gap-2.5 mb-10"
         >
           {certCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition-all duration-200 ${
                 activeFilter === cat
-                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-glow-sm"
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-glow-sm scale-105"
                   : "glass border border-white/10 text-white/60 hover:text-white hover:border-white/20"
               }`}
             >
@@ -156,7 +156,7 @@ export default function Certifications() {
         </motion.div>
 
         {/* Cert grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filtered.map((cert, i) => (
             <CertCard key={cert.id} cert={cert} delay={i * 0.05} />
           ))}

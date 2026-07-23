@@ -30,7 +30,7 @@ export default function Resume() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             My Resume
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             ATS-optimized resume highlighting my AI engineering skills, projects, and certifications
           </p>
         </motion.div>
@@ -67,31 +67,78 @@ export default function Resume() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="glass-hover glow-card rounded-2xl border border-white/8 overflow-hidden"
           >
-            {/* Embedded PDF viewer */}
-            <div className="bg-[#111] rounded-t-2xl px-4 py-3 flex items-center gap-2 border-b border-white/5">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
-              <span className="ml-2 text-xs text-white/30 font-mono">resume.pdf</span>
+            {/* Embedded PDF viewer header bar */}
+            <div className="bg-[#111] rounded-t-2xl px-4 py-3 flex items-center justify-between border-b border-white/5">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500/60" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
+                <div className="w-3 h-3 rounded-full bg-green-500/60" />
+                <span className="ml-2 text-xs text-white/40 font-mono flex items-center gap-1">
+                  <FileText size={12} className="text-indigo-400" /> Namabathula_Saroj_Resume.pdf
+                </span>
+              </div>
+              <span className="text-[10px] text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">
+                Live Interactive Summary
+              </span>
             </div>
 
-            <div className="h-[600px] flex items-center justify-center bg-[#0a0a14]">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto">
-                  <FileText size={32} className="text-white" />
-                </div>
+            {/* Resume Content View */}
+            <div className="p-6 md:p-8 bg-[#070710] space-y-6">
+              {/* Header */}
+              <div className="border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <p className="text-white/70 font-semibold">Namabathula Saroj</p>
-                  <p className="text-white/40 text-sm">AI Engineer & Full-Stack Developer</p>
+                  <h3 className="text-2xl font-bold text-white font-display">{siteConfig.name}</h3>
+                  <p className="text-indigo-400 text-sm font-medium">{siteConfig.title}</p>
+                  <p className="text-white/50 text-xs mt-1">{siteConfig.email} • {siteConfig.location}</p>
                 </div>
-                <p className="text-white/30 text-xs max-w-sm mx-auto leading-relaxed px-4">
-                  Place your resume PDF at <code className="text-indigo-400/70">public/resume.pdf</code> to enable the embedded viewer here.
-                </p>
-                <div className="flex flex-wrap gap-3 justify-center">
-                  <a href={siteConfig.resumeUrl} download
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium">
-                    <Download size={15} /> Download
+                <div className="flex gap-2">
+                  <a
+                    href={siteConfig.resumeUrl}
+                    download
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all shadow-glow-sm"
+                  >
+                    <Download size={14} /> Download PDF
                   </a>
+                </div>
+              </div>
+
+              {/* Summary */}
+              <div>
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-indigo-400 mb-2">Executive Summary</h4>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  {siteConfig.bio}
+                </p>
+              </div>
+
+              {/* Grid 2-col: Core Competencies & Key Experience */}
+              <div className="grid md:grid-cols-2 gap-6 pt-2 border-t border-white/5">
+                <div>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-indigo-400 mb-3">Core Skills</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Python", "PyTorch", "Computer Vision", "YOLO", "OpenCV", "Next.js", "TypeScript", "LangChain", "RAG", "FastAPI", "Docker", "Git"].map((s) => (
+                      <span key={s} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-white/70">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Key Highlights</h4>
+                  <ul className="space-y-1.5 text-xs text-white/60">
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>8+ AI & Full-Stack Projects delivered with measurable impact</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>10+ Verified Certifications from IBM SkillsBuild & Google Cloud</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>B.Tech Information Technology Student passionate about AI systems</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

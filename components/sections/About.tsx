@@ -63,7 +63,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Who I Am
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             A passionate AI engineer driven by curiosity and the desire to build meaningful technology
           </p>
         </motion.div>

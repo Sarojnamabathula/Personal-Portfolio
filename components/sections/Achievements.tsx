@@ -32,7 +32,7 @@ export default function Achievements() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Milestones & Recognition
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             Key accomplishments that mark my growth as an AI engineer and continuous learner
           </p>
         </motion.div>

@@ -35,7 +35,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Technical Arsenal
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             A curated set of technologies I've mastered through building real-world AI and full-stack applications
           </p>
         </motion.div>
@@ -51,14 +51,21 @@ export default function Skills() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+              className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors duration-200 ${
                 activeCategory === cat.id
-                  ? `bg-gradient-to-r ${cat.color} text-white shadow-glow-sm`
+                  ? "text-white"
                   : "glass border border-white/10 text-white/60 hover:text-white hover:border-white/20"
               }`}
             >
-              <span>{cat.icon}</span>
-              {cat.label}
+              {activeCategory === cat.id && (
+                <motion.div
+                  layoutId="activeSkillTab"
+                  className={`absolute inset-0 rounded-xl bg-gradient-to-r ${cat.color} shadow-glow-sm z-0`}
+                  transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                />
+              )}
+              <span className="relative z-10">{cat.icon}</span>
+              <span className="relative z-10">{cat.label}</span>
             </button>
           ))}
         </motion.div>
@@ -92,10 +99,10 @@ export default function Skills() {
                   transition={{ delay: i * 0.05, duration: 0.4 }}
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium text-white/80">{skill.name}</span>
-                    <span className="text-xs text-white/40 font-mono">{skill.level}%</span>
+                    <span className="text-sm font-semibold text-white/90">{skill.name}</span>
+                    <span className="text-xs font-mono font-semibold text-indigo-300">{skill.level}%</span>
                   </div>
-                  <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${skill.level}%` }}
@@ -122,8 +129,8 @@ export default function Skills() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`glass-hover glow-card rounded-xl p-4 text-center border transition-all duration-300 ${
-                activeCategory === cat.id ? "border-indigo-500/30 bg-indigo-500/5" : "border-white/8"
+              className={`glass-hover glow-card rounded-xl p-4 text-center border transition-all duration-300 hover:-translate-y-1 ${
+                activeCategory === cat.id ? "border-indigo-500/50 bg-indigo-500/10 shadow-glow-sm" : "border-white/8 hover:border-indigo-500/30"
               }`}
             >
               <div className="text-2xl mb-2">{cat.icon}</div>

@@ -48,7 +48,7 @@ export default function GitHubSection() {
           <h2 className="text-4xl md:text-5xl font-bold font-display gradient-text mb-4">
             Open Source Activity
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
             Building in public — my GitHub houses all the AI systems and tools I've crafted
           </p>
         </motion.div>

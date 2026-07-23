@@ -9,12 +9,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 const floatingIcons = [
-  { icon: "🤖", delay: 0, x: "10%", y: "20%" },
-  { icon: "🧠", delay: 1, x: "85%", y: "15%" },
-  { icon: "⚡", delay: 2, x: "5%", y: "70%" },
-  { icon: "🔬", delay: 0.5, x: "90%", y: "65%" },
-  { icon: "🐍", delay: 1.5, x: "20%", y: "85%" },
-  { icon: "👁️", delay: 3, x: "75%", y: "80%" },
+  { icon: "🤖", delay: 0, x: "5%", y: "18%" },
+  { icon: "🧠", delay: 1, x: "92%", y: "15%" },
+  { icon: "⚡", delay: 2, x: "4%", y: "72%" },
+  { icon: "🔬", delay: 0.5, x: "94%", y: "75%" },
+  { icon: "🐍", delay: 1.5, x: "15%", y: "88%" },
+  { icon: "👁️", delay: 3, x: "82%", y: "88%" },
 ];
 
 export default function Hero() {
@@ -106,7 +106,7 @@ export default function Hero() {
       ))}
 
       {/* ── Main content ── */}
-      <div className="relative z-10 container-max w-full px-4 md:px-8 pt-24 pb-16">
+      <div className="relative z-10 container-max w-full px-4 md:px-8 pt-28 md:pt-36 pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left: Text */}
           <div className="flex-1 text-center lg:text-left">
